@@ -46,7 +46,7 @@ We'll be modifying the existing code above so that it follows the flow of logic 
 ``` javascript
 else {
   return "Between 5 and 10";
-  }
+}
  ```
  The last statement in an **else-if** flow is in the `else` format
  ### Spoiler alert!
@@ -59,9 +59,9 @@ function testElseIf(val) {
     return "Greater than 10"; 
   } else if (val < 5) { 
     return "Smaller than 5"; 
-  } 
- 
-  return "Between 5 and 10"; 
+  } else {
+    return "Between 5 and 10";
+  }
  } 
  
  // Change this value to test 
@@ -70,6 +70,24 @@ function testElseIf(val) {
 :rocket: [Run code](https://repl.it/@RyanPisuena/GoldenWorriedRuntime)
  ## Code explanation
 The structure of an **else-if logic flow** is an initial `if` statement, one more `if-else` statements, and one final `else` statement.
+
+**Note:** A more semantic way to write conditional statements with returns is to omit the `else` statement and make that return the last line of the function. See below:
+
+```javascript
+function testElseIf(val) { 
+  if (val > 10) { 
+    return "Greater than 10"; 
+  } else if (val < 5) { 
+    return "Smaller than 5"; 
+  }
+
+  // notice how the function will return this string if the other conditions are not met so there is no need for an else statement
+  return "Between 5 and 10";
+ } 
+ 
+ // Change this value to test 
+ testElseIf(7);
+```
  
 ### Resources
 - ["if...else" - *MDN JavaScript reference*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)

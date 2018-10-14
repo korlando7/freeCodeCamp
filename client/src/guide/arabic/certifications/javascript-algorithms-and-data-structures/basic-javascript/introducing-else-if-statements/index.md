@@ -41,9 +41,9 @@ localeTitle: إدخال آخر إذا البيانات
     return "Greater than 10"; 
   } else if (val < 5) { 
     return "Smaller than 5"; 
-  } 
- 
-  return "Between 5 and 10"; 
+  } else {
+    return "Between 5 and 10";
+  }
  } 
  
  // Change this value to test 
