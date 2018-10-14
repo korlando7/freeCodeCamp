@@ -71,7 +71,7 @@ function testElseIf(val) {
  ## Code explanation
 The structure of an **else-if logic flow** is an initial `if` statement, one more `if-else` statements, and one final `else` statement.
 
-**Note:** A more semantic way to write conditional statements with returns is to omit the `else` statement and make that return the last line of the function. See below:
+**Note:** A more semantic way to write conditional statements with returns is to omit the `else` statement and make its return the last line of the function. See below:
 
 ```javascript
 function testElseIf(val) { 
@@ -81,13 +81,15 @@ function testElseIf(val) {
     return "Smaller than 5"; 
   }
 
-  // notice how the function will return this string if the other conditions are not met so there is no need for an else statement
   return "Between 5 and 10";
  } 
  
  // Change this value to test 
  testElseIf(7);
 ```
+If none of the conditions in the statement are met then the function will reach last line and return the default string.
+
+Since the function will return if one of the conditions is met, we don't need to worry about mistakingly reaching the return that was added outside of the conditional.
  
 ### Resources
 - ["if...else" - *MDN JavaScript reference*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
